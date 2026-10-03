@@ -1,0 +1,31 @@
+Data structures are ways of organizing and storing data in a computer so that it can be accessed and
+modified efficiently. Choosing the right data structure is critical to algorithm performance.
+
+Arrays store elements in contiguous memory locations. Access by index is O(1). Insertion or deletion
+at arbitrary positions is O(n) because elements must be shifted.
+
+Linked lists store elements in nodes where each node holds data and a pointer to the next node.
+A doubly linked list also holds a pointer to the previous node, enabling O(1) insertion and deletion
+at any position given an iterator, but O(n) search.
+
+Hash tables (implemented as unordered_map in C++ STL) map keys to values using a hash function.
+Average-case lookup, insertion, and deletion are O(1). Worst-case is O(n) when all keys hash to
+the same bucket (hash collision). hash tables are ideal when fast lookup is more important than
+ordering.
+
+Binary search trees keep elements in sorted order. BST operations (insert, search, delete) are
+O(log n) on average for a balanced tree. An unbalanced BST degrades to O(n).
+
+Heaps are complete binary trees that satisfy the heap property. A min-heap always has the minimum
+element at the root. Heaps support O(1) peek and O(log n) insert and extract-min. Heaps are used
+to implement priority queues and the heap sort algorithm.
+
+Graphs represent relationships between objects. A graph consists of vertices (nodes) and edges.
+Graph traversal algorithms include Breadth-First Search (BFS) and Depth-First Search (DFS).
+
+Stacks (LIFO) and queues (FIFO) are fundamental data structures. The C++ STL provides std::stack,
+std::queue, and std::deque (double-ended queue).
+
+Tries are tree structures that store strings character by character. They enable prefix-based string
+search in O(L) time where L is the length of the string. Tries are used in autocomplete and spell
+checking.

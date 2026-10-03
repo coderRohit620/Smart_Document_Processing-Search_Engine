@@ -1,0 +1,38 @@
+Algorithms are step-by-step procedures for solving problems. Algorithm analysis studies the
+efficiency of algorithms in terms of time complexity and space complexity.
+
+Big O notation describes the upper bound of an algorithm's growth rate as input size n increases.
+O(1) is constant time. O(log n) is logarithmic. O(n) is linear. O(n log n) is linearithmic.
+O(n^2) is quadratic. O(2^n) is exponential.
+
+Sorting algorithms arrange elements in a defined order.
+
+Comparison sorts:
+- Bubble sort: O(n^2) average and worst case. Simple but inefficient.
+- Selection sort: O(n^2) always. Makes exactly n-1 swaps.
+- Insertion sort: O(n^2) worst case but O(n) on nearly sorted data.
+- Merge sort: O(n log n) always. Stable sort. Uses O(n) extra space.
+- Quick sort: O(n log n) average, O(n^2) worst case. In-place. Widely used.
+- Heap sort: O(n log n) always. In-place but not stable.
+
+std::sort in the C++ STL uses introsort, which combines quicksort, heapsort, and insertion sort
+to guarantee O(n log n) worst-case performance.
+
+Searching algorithms locate elements in a collection.
+- Linear search: O(n). Works on unsorted data.
+- Binary search: O(log n). Requires sorted data.
+
+Graph algorithms:
+- BFS (Breadth-First Search): explores level by level. Time O(V + E).
+- DFS (Depth-First Search): explores as deep as possible first. Time O(V + E).
+- Dijkstra's algorithm: shortest path in a weighted graph. O((V + E) log V).
+
+Dynamic programming solves problems by breaking them into overlapping subproblems and caching
+results (memoization). Classic examples include Fibonacci, longest common subsequence, and
+knapsack problem.
+
+Greedy algorithms make locally optimal choices at each step hoping to find a global optimum.
+Examples include Huffman coding, Prim's MST, and Kruskal's MST.
+
+Divide and conquer divides the problem into smaller subproblems, solves each recursively, and
+combines results. Merge sort and quick sort are divide and conquer algorithms.

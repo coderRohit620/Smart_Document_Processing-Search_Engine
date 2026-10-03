@@ -1,0 +1,30 @@
+Memory management is the process of controlling and coordinating a computer's main memory. In C++,
+memory management is performed manually by the programmer using dynamic allocation.
+
+The new operator allocates memory on the heap and returns a pointer to the allocated memory block.
+The delete operator frees previously allocated memory. Failing to call delete after new causes a
+memory leak, where memory is consumed but never returned to the operating system.
+
+A dangling pointer occurs when a pointer references memory that has already been freed. Accessing a
+dangling pointer results in undefined behavior, which is one of the most dangerous bugs in C++.
+
+Smart pointers solve both memory leaks and dangling pointer problems:
+
+unique_ptr provides exclusive ownership. When the unique_ptr goes out of scope, it automatically
+calls delete on the managed object. Only one unique_ptr can own a given resource at a time.
+
+shared_ptr uses reference counting to allow multiple owners. The managed object is deleted when the
+last shared_ptr owning it is destroyed or reset. shared_ptr has overhead due to reference count
+maintenance.
+
+weak_ptr holds a non-owning reference to an object managed by shared_ptr. It breaks circular
+reference cycles that would otherwise prevent shared_ptr from freeing memory.
+
+RAII (Resource Acquisition Is Initialization) ties resource lifetime to object lifetime. When an
+object is constructed, it acquires resources. When the object is destroyed (leaving scope), it
+releases resources automatically. std::ifstream, std::mutex::lock_guard, and std::unique_ptr are
+all examples of RAII wrappers in the C++ standard library.
+
+Stack memory is automatically managed. Variables declared inside a function live on the stack and
+are freed when the function returns. Heap memory persists until explicitly freed with delete or
+until a smart pointer's destructor runs.

@@ -1,0 +1,21 @@
+C++ is a general-purpose programming language that provides high performance and fine-grained control
+over system resources. It supports object-oriented programming, generic programming, and low-level
+memory manipulation.
+
+C++ is widely used in systems programming, game development, embedded systems, and high-performance
+applications. Major operating systems, browsers, and databases are built with C++.
+
+C++ supports classes and objects, encapsulation, inheritance, and polymorphism. These OOP features
+help organize large codebases into maintainable and reusable components.
+
+The C++ Standard Template Library (STL) provides powerful data structures like vector, map,
+unordered_map, list, set, and queue, along with algorithms like sort, find, and transform.
+
+Modern C++ (C++11 onwards) introduced smart pointers (unique_ptr, shared_ptr, weak_ptr), lambda
+expressions, move semantics, range-based for loops, and auto type deduction.
+
+C++ templates allow generic programming, enabling algorithms and data structures that work with any
+type. Templates are resolved at compile time, providing zero-cost abstraction.
+
+Exception handling in C++ uses try, catch, and throw keywords. Destructors are guaranteed to run
+during stack unwinding, making RAII-based resource management safe even in the presence of exceptions.

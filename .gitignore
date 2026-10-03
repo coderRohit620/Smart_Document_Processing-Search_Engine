@@ -1,0 +1,38 @@
+# Smart Document Processing & Search Engine — .gitignore
+
+# Build directory
+build/
+Build/
+out/
+
+
+# CMake artifacts
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cmake
+
+# Compiled objects and binaries
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.exe
+*.out
+
+# IDE files
+.vscode/
+.idea/
+*.user
+*.sln
+*.vcxproj
+*.vcxproj.filters
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
